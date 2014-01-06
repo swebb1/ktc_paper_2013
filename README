@@ -1,0 +1,15 @@
+
+#Trimming and filtering fastq
+trimmomatic.sh
+
+#Align sequences to sacCer3 genome
+mapbwasingleend.sh
+
+#Convert bam to wiggle file and scale reads to reads per base per million mapped reads
+genomeCoverageBed on Galaxy using -bg and -scale options
+
+#Create windows across genomic features
+regionSlidingWindow.pl
+
+#Plot windowed values files across genomic features
+See example scripts in R_plots folder
